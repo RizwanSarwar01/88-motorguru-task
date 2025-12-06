@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 // Website routes (public)
 Route::get('/', function () {
     return view('auth.login');
-})->name('login');
+})->name('/');
 
 // Dashboard route (authenticated)
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
